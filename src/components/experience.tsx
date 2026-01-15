@@ -26,11 +26,11 @@ export function Experience() {
                                 key={index}
                                 initial={{ opacity: 0, x: -20 }}
                                 whileInView={{ opacity: 1, x: 0 }}
-                                viewport={{ once: true }}
+                                viewport={{ amount: 0.3 }}
                                 transition={{ duration: 0.5, delay: index * 0.1 }}
-                                className="relative"
+                                className="relative p-6 rounded-2xl border border-white/5 bg-card/20 backdrop-blur-sm hover:bg-card/40 transition-colors"
                             >
-                                <div className="absolute -left-[41px] top-0 w-5 h-5 rounded-full bg-background border-4 border-primary" />
+                                <div className="absolute -left-[53px] top-6 w-5 h-5 rounded-full bg-background border-4 border-primary" />
                                 <div className="space-y-2">
                                     <h4 className="font-bold text-lg">{item.role}</h4>
                                     <p className="text-primary font-medium">{item.company}</p>
@@ -58,11 +58,11 @@ export function Experience() {
                                 key={index}
                                 initial={{ opacity: 0, x: 20 }}
                                 whileInView={{ opacity: 1, x: 0 }}
-                                viewport={{ once: true }}
+                                viewport={{ amount: 0.3 }}
                                 transition={{ duration: 0.5, delay: index * 0.1 }}
-                                className="relative"
+                                className="relative p-6 rounded-2xl border border-white/5 bg-card/20 backdrop-blur-sm hover:bg-card/40 transition-colors"
                             >
-                                <div className="absolute -left-[41px] top-0 w-5 h-5 rounded-full bg-background border-4 border-primary" />
+                                <div className="absolute -left-[53px] top-6 w-5 h-5 rounded-full bg-background border-4 border-primary" />
                                 <div className="space-y-2">
                                     <h4 className="font-bold text-lg">{item.degree}</h4>
                                     <p className="text-primary font-medium">{item.institution}</p>

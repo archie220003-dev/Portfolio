@@ -22,9 +22,10 @@ export function Contact() {
         <section id="contact" className="py-24 container-width">
             <div className="max-w-2xl mx-auto text-center space-y-12">
                 <motion.div
-                    initial={{ opacity: 0, scale: 0.95 }}
+                    initial={{ opacity: 0, scale: 0.9 }}
                     whileInView={{ opacity: 1, scale: 1 }}
-                    viewport={{ once: true }}
+                    viewport={{ amount: 0.3 }}
+                    transition={{ duration: 0.8, ease: [0.22, 1, 0.36, 1] }}
                     className="space-y-4"
                 >
                     <h2 className="text-3xl md:text-4xl font-bold">Get In Touch</h2>
@@ -36,19 +37,21 @@ export function Contact() {
                 <motion.div
                     initial="hidden"
                     whileInView="show"
-                    viewport={{ once: true }}
+                    viewport={{ amount: 0.3 }}
                     variants={{
-                        hidden: { opacity: 0, y: 20 },
+                        hidden: { opacity: 0, y: 30 },
                         show: {
                             opacity: 1,
                             y: 0,
                             transition: {
                                 staggerChildren: 0.1,
-                                delayChildren: 0.2
+                                delayChildren: 0.2,
+                                duration: 0.8,
+                                ease: [0.22, 1, 0.36, 1]
                             }
                         }
                     }}
-                    className="bg-card border border-border rounded-2xl p-8 md:p-12 shadow-sm"
+                    className="bg-card/30 backdrop-blur-xl border border-white/10 rounded-2xl p-8 md:p-12 shadow-sm"
                 >
                     <div className="flex flex-col items-center gap-6">
                         <motion.div variants={{ hidden: { opacity: 0, scale: 0.8 }, show: { opacity: 1, scale: 1 } }} className="p-4 bg-primary/10 rounded-full text-primary">

@@ -33,10 +33,10 @@ export function Skills() {
                             variants={fadeInAnimationVariants}
                             initial="initial"
                             whileInView="animate"
-                            viewport={{ once: true }}
+                            viewport={{ amount: 0.1 }}
                             custom={index}
                             whileHover={{ scale: 1.05 }}
-                            className="bg-card text-card-foreground border border-border/50 rounded-xl px-5 py-3 shadow-sm hover:shadow-md transition-shadow"
+                            className="bg-card/40 backdrop-blur-md border border-white/10 text-card-foreground rounded-xl px-5 py-3 shadow-sm hover:shadow-md transition-all hover:scale-105 hover:bg-card/60"
                         >
                             {skill}
                         </motion.li>

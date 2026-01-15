@@ -6,7 +6,7 @@ export const ABOUT = {
     email: "arrchitt@gmail.com",
     phone: "+91 7973487266",
     linkedin: "https://www.linkedin.com/in/archit-sharma-651460253/",
-    github: "https://github.com/archie220003-del",
+    github: "https://github.com/archie220003-dev",
 };
 
 export const EXPERIENCE = [

@@ -40,7 +40,7 @@ export function Navbar() {
         <nav
             className={cn(
                 "fixed top-0 w-full z-50 transition-all duration-300 border-b border-transparent",
-                scrolled ? "bg-background/60 backdrop-blur-xl border-border/50 shadow-sm" : "bg-transparent"
+                scrolled ? "bg-background/60 backdrop-blur-xl border-b border-border/20 shadow-sm supports-[backdrop-filter]:bg-background/60" : "bg-transparent"
             )}
         >
             <div className="container-width flex items-center justify-between h-16 md:h-20">

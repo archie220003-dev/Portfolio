@@ -18,11 +18,12 @@ export function Projects() {
                     {PROJECTS.map((project, index) => (
                         <motion.div
                             key={index}
-                            initial={{ opacity: 0, y: 20 }}
+                            initial={{ opacity: 0, y: 30 }}
                             whileInView={{ opacity: 1, y: 0 }}
-                            viewport={{ once: true }}
-                            transition={{ delay: index * 0.1, duration: 0.5 }}
-                            className="group relative bg-background border border-border/50 rounded-2xl overflow-hidden hover:shadow-2xl transition-all duration-300"
+                            viewport={{ amount: 0.3 }}
+                            transition={{ delay: index * 0.1, duration: 0.6, ease: [0.22, 1, 0.36, 1] }}
+                            whileHover={{ y: -5, scale: 1.02 }}
+                            className="group relative bg-background/50 backdrop-blur-sm border border-white/10 rounded-2xl overflow-hidden hover:shadow-2xl transition-all duration-300 hover:scale-[1.02]"
                         >
                             <div className="absolute inset-0 bg-gradient-to-br from-primary/5 to-transparent opacity-0 group-hover:opacity-100 transition-opacity" />
 
