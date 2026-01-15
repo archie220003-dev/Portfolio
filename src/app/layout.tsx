@@ -2,6 +2,7 @@ import type { Metadata } from "next";
 import { Inter } from "next/font/google";
 import { ThemeProvider } from "@/components/theme-provider";
 import { Navbar } from "@/components/navbar";
+import { Intro } from "@/components/intro";
 import { Footer } from "@/components/footer";
 import "./globals.css";
 
@@ -26,6 +27,7 @@ export default function RootLayout({
           enableSystem
           disableTransitionOnChange
         >
+          <Intro />
           <Navbar />
           <main className="flex-grow pt-16">
             {children}
