@@ -34,33 +34,32 @@ export function Contact() {
                 </motion.div>
 
                 <motion.div
-                    initial={{ opacity: 0, y: 20 }}
-                    whileInView={{ opacity: 1, y: 0 }}
+                    initial="hidden"
+                    whileInView="show"
                     viewport={{ once: true }}
-                    transition={{ delay: 0.2 }}
+                    variants={{
+                        hidden: { opacity: 0, y: 20 },
+                        show: {
+                            opacity: 1,
+                            y: 0,
+                            transition: {
+                                staggerChildren: 0.1,
+                                delayChildren: 0.2
+                            }
+                        }
+                    }}
                     className="bg-card border border-border rounded-2xl p-8 md:p-12 shadow-sm"
                 >
                     <div className="flex flex-col items-center gap-6">
-                        <div className="p-4 bg-primary/10 rounded-full text-primary">
+                        <motion.div variants={{ hidden: { opacity: 0, scale: 0.8 }, show: { opacity: 1, scale: 1 } }} className="p-4 bg-primary/10 rounded-full text-primary">
                             <Mail className="w-8 h-8" />
-                        </div>
+                        </motion.div>
 
-                        <a
-                            href={`mailto:${ABOUT.email}`}
-                            className="text-2xl md:text-3xl font-bold hover:text-primary transition-colors"
-                        >
-                            {ABOUT.email}
-                        </a>
-                        <a
-                            href={`tel:${ABOUT.phone}`}
-                            className="text-xl md:text-2xl font-bold hover:text-primary transition-colors text-muted-foreground hover:text-foreground"
-                        >
-                            {ABOUT.phone}
-                        </a>
+                        <motion.p variants={{ hidden: { opacity: 0, y: 10 }, show: { opacity: 1, y: 0 } }} className="text-muted-foreground text-center max-w-md">
+                            Feel free to reach out using the form below.
+                        </motion.p>
 
-                        <div className="w-full h-px bg-border/50 my-2" />
-
-                        <form className="w-full space-y-4 text-left" onSubmit={handleSendMessage}>
+                        <motion.form variants={{ hidden: { opacity: 0, y: 10 }, show: { opacity: 1, y: 0 } }} className="w-full space-y-4 text-left" onSubmit={handleSendMessage}>
                             <div className="grid md:grid-cols-2 gap-4">
                                 <div className="space-y-2">
                                     <label htmlFor="name" className="text-sm font-medium">Name</label>
@@ -103,7 +102,7 @@ export function Contact() {
                                 <Send className="w-4 h-4 mr-2" />
                                 Send Message
                             </Button>
-                        </form>
+                        </motion.form>
                     </div>
                 </motion.div>
             </div>
