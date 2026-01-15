@@ -2,7 +2,7 @@
 
 import { motion } from "framer-motion";
 import { PROJECTS } from "@/lib/data";
-import { Folder, ExternalLink } from "lucide-react";
+import { Folder } from "lucide-react";
 import { Button } from "@/components/ui/button";
 
 export function Projects() {
@@ -32,8 +32,6 @@ export function Projects() {
                                     <div className="p-3 bg-primary/10 rounded-xl text-primary group-hover:rotate-12 transition-transform">
                                         <Folder className="w-6 h-6" />
                                     </div>
-                                    {/* Placeholder for link if available in future data */}
-                                    <ExternalLink className="w-5 h-5 text-muted-foreground opacity-50 group-hover:opacity-100 transition-opacity" />
                                 </div>
 
                                 <h3 className="text-xl font-bold group-hover:text-primary transition-colors">
