@@ -102,8 +102,10 @@
   --destructive-foreground: 0 0% 98%;
   --border: 240 5.9% 90%;
   --input: 240 5.9% 90%;
-  --ring: 240 5.9% 10%;
-  --radius: 0.75rem;
+  --ring: 265 52% 48%;
+
+  --radius: 2.5rem;
+  /* Maximum Roundness */
 }
 
 /* Dark Mode */

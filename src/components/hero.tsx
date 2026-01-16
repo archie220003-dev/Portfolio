@@ -23,13 +23,13 @@ export function Hero() {
                 <motion.div
                     initial={{ opacity: 0, y: 30 }}
                     animate={{ opacity: 1, y: 0 }}
-                    transition={{ duration: 1, ease: [0.22, 1, 0.36, 1] }}
+                    transition={{ duration: 1, type: "spring", bounce: 0.5 }}
                     className="space-y-4"
                 >
                     <motion.div
-                        initial={{ opacity: 0, y: 20 }}
-                        animate={{ opacity: 1, y: 0 }}
-                        transition={{ duration: 0.8, delay: 0.2, ease: [0.22, 1, 0.36, 1] }}
+                        initial={{ opacity: 0, scale: 0.8 }}
+                        animate={{ opacity: 1, scale: 1 }}
+                        transition={{ duration: 0.8, delay: 0.2, type: "spring", bounce: 0.5 }}
                     >
                         <span className="inline-block px-3 py-1 rounded-full bg-accent/50 border border-accent text-sm font-medium text-muted-foreground backdrop-blur-sm mb-4">
                             Hello, Welcome
@@ -40,7 +40,7 @@ export function Hero() {
                             layoutId="brand-text"
                             initial={{ opacity: 0, y: 20 }}
                             animate={{ opacity: 1, y: 0 }}
-                            transition={{ duration: 1.5, ease: "easeInOut" }}
+                            transition={{ duration: 1.5, type: "spring", bounce: 0.2 }}
                             className="text-6xl md:text-9xl font-black tracking-tighter text-foreground mb-6"
                         >
                             {ABOUT.name}
@@ -49,7 +49,7 @@ export function Hero() {
                     <motion.h2
                         initial={{ opacity: 0, y: 20 }}
                         animate={{ opacity: 1, y: 0 }}
-                        transition={{ duration: 0.8, delay: 0.4, ease: [0.22, 1, 0.36, 1] }}
+                        transition={{ duration: 0.8, delay: 0.4, type: "spring", bounce: 0.5 }}
                         className="text-3xl md:text-5xl font-bold tracking-tight text-gradient leading-tight"
                     >
                         Building the future, <br className="hidden md:block" />
@@ -58,7 +58,7 @@ export function Hero() {
                     <motion.p
                         initial={{ opacity: 0, y: 20 }}
                         animate={{ opacity: 1, y: 0 }}
-                        transition={{ duration: 0.8, delay: 0.5, ease: [0.22, 1, 0.36, 1] }}
+                        transition={{ duration: 0.8, delay: 0.5, type: "spring", bounce: 0.5 }}
                         className="max-w-2xl mx-auto text-lg md:text-xl text-muted-foreground leading-relaxed"
                     >
                         {ABOUT.bio.split('.')[0]}. {/* Taking the first sentence for the hero */}
@@ -67,9 +67,9 @@ export function Hero() {
                 </motion.div>
 
                 <motion.div
-                    initial={{ opacity: 0, y: 20 }}
-                    animate={{ opacity: 1, y: 0 }}
-                    transition={{ duration: 0.8, delay: 0.6, ease: [0.22, 1, 0.36, 1] }}
+                    initial={{ opacity: 0, scale: 0.5 }}
+                    animate={{ opacity: 1, scale: 1 }}
+                    transition={{ duration: 0.8, delay: 0.6, type: "spring", bounce: 0.6 }}
                     className="flex items-center justify-center gap-4"
                 >
                     <Link href="#projects">

@@ -11,8 +11,8 @@ const fadeInAnimationVariants = {
         transition: {
             delay: 0.05 * index,
             type: "spring" as const,
-            stiffness: 100,
-            damping: 15
+            stiffness: 260,
+            damping: 20
         },
     }),
 };

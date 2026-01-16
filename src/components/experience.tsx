@@ -24,11 +24,11 @@ export function Experience() {
                         {EXPERIENCE.map((item, index) => (
                             <motion.div
                                 key={index}
-                                initial={{ opacity: 0, x: -20 }}
-                                whileInView={{ opacity: 1, x: 0 }}
+                                initial={{ opacity: 0, x: -20, scale: 0.9 }}
+                                whileInView={{ opacity: 1, x: 0, scale: 1 }}
                                 viewport={{ amount: 0.3 }}
-                                transition={{ duration: 0.5, delay: index * 0.1 }}
-                                className="relative p-6 rounded-2xl border border-white/5 bg-card/20 backdrop-blur-sm hover:bg-card/40 transition-colors"
+                                transition={{ type: "spring", stiffness: 260, damping: 20, delay: index * 0.1 }}
+                                className="relative group p-6 rounded-2xl border border-white/5 bg-card/20 backdrop-blur-sm hover:bg-card/40 transition-colors"
                             >
                                 <div className="absolute -left-[53px] top-6 w-5 h-5 rounded-full bg-background border-4 border-primary" />
                                 <div className="space-y-2">
