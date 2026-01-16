@@ -8,6 +8,7 @@ import { Menu, X, Code2, Moon, Sun, Palette } from "lucide-react";
 import { useTheme } from "next-themes";
 import { Button } from "@/components/ui/button";
 import { cn } from "@/lib/utils";
+import { useLoading } from "@/context/loading-context";
 
 const NAV_ITEMS = [
     { name: "About", href: "#about" },
@@ -23,6 +24,7 @@ export function Navbar() {
     const { theme, setTheme } = useTheme();
     const [mounted, setMounted] = React.useState(false);
     const [showThemeMenu, setShowThemeMenu] = React.useState(false);
+    const { isLoading } = useLoading();
 
     React.useEffect(() => {
         setMounted(true);

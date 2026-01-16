@@ -9,7 +9,7 @@ export function Footer() {
                 <div className="text-center md:text-left">
                     <p className="font-bold text-lg">{ABOUT.name}</p>
                     <p className="text-muted-foreground text-sm">
-                        Based in {ABOUT.location}
+                        {ABOUT.location}
                     </p>
                 </div>
 

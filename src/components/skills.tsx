@@ -10,6 +10,9 @@ const fadeInAnimationVariants = {
         y: 0,
         transition: {
             delay: 0.05 * index,
+            type: "spring" as const,
+            stiffness: 100,
+            damping: 15
         },
     }),
 };
@@ -35,8 +38,8 @@ export function Skills() {
                             whileInView="animate"
                             viewport={{ amount: 0.1 }}
                             custom={index}
-                            whileHover={{ scale: 1.05 }}
-                            className="bg-card/40 backdrop-blur-md border border-white/10 text-card-foreground rounded-xl px-5 py-3 shadow-sm hover:shadow-md transition-all hover:scale-105 hover:bg-card/60"
+                            whileHover={{ scale: 1.05, transition: { type: "spring", stiffness: 400, damping: 10 } }}
+                            className="bg-card/40 backdrop-blur-md border border-white/10 text-card-foreground rounded-xl px-5 py-3 shadow-sm hover:shadow-md hover:bg-card/60 cursor-default"
                         >
                             {skill}
                         </motion.li>

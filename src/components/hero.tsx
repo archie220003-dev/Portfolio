@@ -5,8 +5,11 @@ import { ArrowDown } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import Link from "next/link";
 import { ABOUT } from "@/lib/data";
+import { useLoading } from "@/context/loading-context";
 
 export function Hero() {
+    const { isLoading } = useLoading();
+
     return (
         <section className="relative h-[90vh] flex items-center justify-center overflow-hidden bg-background">
             {/* Background Ambience */}
@@ -32,14 +35,17 @@ export function Hero() {
                             Hello, Welcome
                         </span>
                     </motion.div>
-                    <motion.h1
-                        initial={{ opacity: 0, y: 20 }}
-                        animate={{ opacity: 1, y: 0 }}
-                        transition={{ duration: 0.8, delay: 0.3, ease: [0.22, 1, 0.36, 1] }}
-                        className="text-6xl md:text-9xl font-black tracking-tighter text-foreground mb-6"
-                    >
-                        {ABOUT.name}
-                    </motion.h1>
+                    {!isLoading && (
+                        <motion.h1
+                            layoutId="brand-text"
+                            initial={{ opacity: 0, y: 20 }}
+                            animate={{ opacity: 1, y: 0 }}
+                            transition={{ duration: 1.5, ease: "easeInOut" }}
+                            className="text-6xl md:text-9xl font-black tracking-tighter text-foreground mb-6"
+                        >
+                            {ABOUT.name}
+                        </motion.h1>
+                    )}
                     <motion.h2
                         initial={{ opacity: 0, y: 20 }}
                         animate={{ opacity: 1, y: 0 }}

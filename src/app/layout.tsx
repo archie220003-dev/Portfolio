@@ -4,6 +4,8 @@ import { ThemeProvider } from "@/components/theme-provider";
 import { Navbar } from "@/components/navbar";
 import { Intro } from "@/components/intro";
 import { Footer } from "@/components/footer";
+import { LoadingProvider } from "@/context/loading-context";
+import { ScrollToTop } from "@/components/scroll-to-top";
 import "./globals.css";
 
 const inter = Inter({ subsets: ["latin"], variable: "--font-inter" });
@@ -27,12 +29,15 @@ export default function RootLayout({
           enableSystem
           disableTransitionOnChange
         >
-          <Intro />
-          <Navbar />
-          <main className="flex-grow pt-16">
-            {children}
-          </main>
-          <Footer />
+          <LoadingProvider>
+            <ScrollToTop />
+            <Intro />
+            <Navbar />
+            <main className="flex-grow pt-16">
+              {children}
+            </main>
+            <Footer />
+          </LoadingProvider>
         </ThemeProvider>
       </body>
     </html>
